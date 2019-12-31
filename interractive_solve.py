@@ -111,9 +111,11 @@ def main():
             start_time=time()
             if solve(data):
                 print("[+]Solved!!!: %fsec."%(time()-start_time))
-                for i in data:print(i)
+                for i in data:
+                    print("%s: %s"%(str(data.index(i)),",".join(list(map(str,i)))))
             else:
                 print("[-]Unsolved...")
+
     except KeyboardInterrupt:
         print("                             ",end="")
         print("\r[-]Close?:[y],n ",end="")
